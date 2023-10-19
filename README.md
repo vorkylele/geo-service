@@ -1,17 +1,30 @@
-### Проект по тестированию Портал Пациента
+### Сервис для получения стран
 
 ---
 
-#### Запуск тестов
+#### Метод для получения всех стран
 ```sh
-mvn clean test
+GET "localhost:9002/countries"
 ```
 
 ---
 
-#### Запуск Allure отчета
+#### Метод для получения определенной страны
 ```sh
-allure serve allure-results
+GET "localhost:9002/countries/{countryCode}"
+```
+
+---
+#### Метод для создания страны
+```sh
+GET "localhost:9002/countries"
+```
+
+---
+
+#### Метод для обновления определенной страны
+```sh
+GET "localhost:9002/countries/{countryCode}"
 ```
 
 ---

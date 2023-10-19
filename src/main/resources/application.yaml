@@ -1,1 +1,24 @@
+server:
+  port: 9002
 
+logging:
+  level:
+    root: INFO
+
+spring:
+  application:
+    name: geo-service
+  datasource:
+    hikari:
+      connection-timeout: 20000
+      minimum-idle: 5
+      maximum-pool-size: 10
+      idle-timeout: 10000
+      max-lifetime: 1000
+      auto-commit: true
+    username: postgres
+    password: secret
+    url: jdbc:postgresql://localhost:5432/geo-service
+  sql:
+    init:
+      mode: always
